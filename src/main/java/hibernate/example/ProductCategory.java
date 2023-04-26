@@ -1,4 +1,4 @@
-package hibernate;
+package hibernate.example;
 
 import jakarta.persistence.*;
 

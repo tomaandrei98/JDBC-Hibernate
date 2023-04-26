@@ -1,4 +1,4 @@
-package hibernate;
+package hibernate.example;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

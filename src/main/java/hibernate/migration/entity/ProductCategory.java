@@ -2,10 +2,7 @@ package hibernate.migration.entity;
 
 import hibernate.migration.entity.base.BaseEntity;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -14,6 +11,8 @@ import java.util.List;
 @NoArgsConstructor(force = true)
 @RequiredArgsConstructor
 @Data
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
 public class ProductCategory extends BaseEntity {
     @Column(name = "category_name")
     @NonNull
@@ -21,5 +20,7 @@ public class ProductCategory extends BaseEntity {
 
     @OneToMany
     @JoinColumn(name = "category_id")
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private List<Product> allProductsPerCategory;
 }

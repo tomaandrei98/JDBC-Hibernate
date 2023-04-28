@@ -23,5 +23,7 @@
 
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+
     </session-factory>
 </hibernate-configuration>
